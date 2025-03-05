@@ -1,4 +1,4 @@
-package middleEarthCharaacters;
+package middleEarthCharacters;
 
 public abstract class MiddleEarthCharacter {
 	private String name;

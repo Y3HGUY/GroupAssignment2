@@ -2,20 +2,20 @@ package charClasses;
 
 import middleEarthCharacters.MiddleEarthCharacter;
 
-public class Dwarf extends MiddleEarthCharacter {
+public class Human extends MiddleEarthCharacter{
 
-	public Dwarf(String name, double health, double power) {
+	public Human(String name, double health, double power) {
 		super(name, health, power);
 	}
 	
 	@Override
 	public boolean attack(MiddleEarthCharacter target) {
-		if (target instanceof Dwarf || target instanceof Wizard) {
+		if (target instanceof Human || target instanceof Orc) {
 			System.out.println(getName() + "ineffective attack " + target.getName());
 			return false;
 		}
 		
-		double damage = (target instanceof Elf) ? getPower() * 1.5 :getPower();
+		double damage = (target instanceof Wizard) ? getPower() * 1.5 :getPower();
 		target.setHealth(target.getHealth() - damage);
 		System.out.println(getName() + "attacked" + target.getName() + "for " + damage + "damage!");
 		
@@ -24,6 +24,7 @@ public class Dwarf extends MiddleEarthCharacter {
 	
 	@Override
 	public String getRace() {
-		return "Dwarf";
+		return "Human";
 	}
+
 }
