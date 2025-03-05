@@ -7,7 +7,15 @@ public class Dwarf extends MiddleEarthCharacter {
 	public Dwarf(String name, double health, double power) {
 		super(name, health, power);
 	}
-	
+	/**
+	 * attacks another middleEarthCharacter
+	 * 
+	 * ineffective against dwarf and wizard
+	 * 1.5 dmg to elf
+	 * 
+	 * @param target character being attacked
+	 * @return true if character attack is hit, else false 
+	 */
 	@Override
 	public boolean attack(MiddleEarthCharacter target) {
 		if (target instanceof Dwarf || target instanceof Wizard) {
@@ -21,7 +29,11 @@ public class Dwarf extends MiddleEarthCharacter {
 		
 		return true;
 	}
-	
+	/**
+	 * returns race of character 
+	 * 
+	 * @return returns "Dwarf" race
+	 */
 	@Override
 	public String getRace() {
 		return "Dwarf";

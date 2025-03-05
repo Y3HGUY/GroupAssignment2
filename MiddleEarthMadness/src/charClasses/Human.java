@@ -7,7 +7,15 @@ public class Human extends MiddleEarthCharacter{
 	public Human(String name, double health, double power) {
 		super(name, health, power);
 	}
-	
+	/**
+	 * attacks another middleEarthCharacter
+	 * 
+	 * ineffective against Human and Orc
+	 * 1.5 dmg to Wizard
+	 * 
+	 * @param target character being attacked
+	 * @return true if character attack is hit, else false 
+	 */
 	@Override
 	public boolean attack(MiddleEarthCharacter target) {
 		if (target instanceof Human || target instanceof Orc) {
@@ -21,7 +29,11 @@ public class Human extends MiddleEarthCharacter{
 		
 		return true;
 	}
-	
+	/**
+	 * returns race of character 
+	 * 
+	 * @return returns "Human" race
+	 */
 	@Override
 	public String getRace() {
 		return "Human";
